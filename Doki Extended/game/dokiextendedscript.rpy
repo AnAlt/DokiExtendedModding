@@ -60,7 +60,6 @@ label dokiextended:
     play music t5
     show monika 1d at t11 zorder 2
     'As Monika sees Sayori, she tries to hide her horror.'
-    show screen tear(20, 0.1, 0.1, 0, 40)
     'Monika mutters something about a game.'
     show monika 1a at t41 zorder 3
     show natsuki 1g at t42 zorder 4
@@ -192,7 +191,10 @@ label festival:
     show yuri 1a at t43 zorder 4
     show sayori 1a at t44 zorder 5
 
-
+    s 'I\'m next right?'
+    m 'You then Natsuki, then Yuri, then [player].'
+    s 'Ok.'
+    'Sayori takes a deep breath.'
     s 'Wish me luck guys.'
     mc 'You bet.'
 
@@ -225,6 +227,8 @@ label festival:
     show natsuki 4a at t42 zorder 3
     show yuri 1a at t43 zorder 4
     show monika 2a at t44 zorder 5
+
+
     'When I look at Sayori, she looks genuinly happy for the first time since I had rejected her.'
     mc 'Sayori, you did extremely well!'
     s 5b '...Maybe...'
@@ -240,16 +244,84 @@ label festival:
     mc 'You still need to perform.'
     n 5h 'Fine.'
     'Natsuki steps up to the podium.'
+
+
     hide monika
     hide yuri
     hide sayori
     show natsuki 1i at t11 zorder 2
+
+
     n 2j 'Hello! I am Natsuki, a member at the Literature Club.'
+    n 1d 'This is my poem, Eagles Can Fly.'
+    n 2d 'Monkeys can climb'
+    n 2d 'Crickets can leap'
+    n 2j 'Horses can race'
+    n 3j 'Cheetahs can run'
+    n 3d 'Eagles can fly'
+    n 1d 'People can try'
+    n 4d 'But that\'s about it.'
+    'Once again, the audience applauds.'
 
 
+    show natsuki 4d at t41 zorder 2
+    show sayori 1a at t42 zorder 3
+    show yuri 1a at t43 zorder 4
+    show monika 2a at t44 zorder 5
 
 
+    mc 'That was really good, Natsuki!'
+    n 5a 'Of course it was.'
+    mc 'Wait. You said you were going to perform {i}Because You{/i}.'
+    n 'I didn\'t want to'
+    mc 'Okay?'
+    y 4b 'Its my turn right?'
+    mc 'Yep. You can do this!'
+    y 1k 'Ok.'
 
+
+    hide natsuki
+    hide sayori
+    hide monika
+    show yuri 1m at t11 zorder 2
+
+    y 4b 'I am Yuri, a member of the Literature Club, and this is my poem, Ghost Under the Light'
+    y 1m 'The tendrils of my hair illuminate beneath the amber glow.'
+    y 2k'Bathing.'
+    y 1k'It must be this one.'
+    y 1m'The last remaining streetlight to have withstood the test of time.'
+    y 1n'The last yet to be replaced by the sickening blue-green hue of the future.'
+    y 2l'I bathe. Calm; breathing air of the present but living in the past.'
+    y 1f'The light flickers.'
+    y 1i'I flicker back.'
+
+
+    show natsuki 1a at t41 zorder 2
+    show sayori 1a at t42 zorder 3
+    show yuri 1a at t43 zorder 4
+    show monika 2a at t44 zorder 5
+
+
+    n 1y'That was really good!'
+    y 1f'Are you saying that just to be nice?'
+    n 5f'Hey!'
+
+
+    'As I think about my speach, the girls\' conversation starts to fade away.'
+
+
+    mc 'Ok. I\'m ready.'
+
+    scene dark
+    with dissolve_scene_full
+    hide natsuki
+    hide sayori
+    hide yuri
+    hide monika
+    'I recite my poem.'
+    scene bg club_day
+    with dissolve_scene_full
+    'end'
 
     return
 label nofestival:
