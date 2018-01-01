@@ -60,6 +60,7 @@ label dokiextended:
     play music t5
     show monika 1d at t11 zorder 2
     'As Monika sees Sayori, she tries to hide her horror.'
+    show screen tear(20, 0.1, 0.1, 0, 40)
     'Monika mutters something about a game.'
     show monika 1a at t41 zorder 3
     show natsuki 1g at t42 zorder 4
@@ -111,6 +112,8 @@ label festival:
     with dissolve_scene_full
     hide natsuki
     hide sayori
+
+
     mc 'Sayori, hurry up!'
     s 'Why do you have to run so quicly!'
     show sayori 1l at t11 zorder 2
@@ -124,22 +127,30 @@ label festival:
     s 1bv 'Are you sure I can perform?'
     mc 'I am 100\% certain, Sayori'
     s 1by 'I can trust you.'
+
+
     scene bg club_day
     with wipeleft_scene
     show sayori 1y at t41 zorder 2
     show natsuki 5g at t42 zorder 3
     show yuri 1a at t43 zorder 4
     show monika 2a at t44 zorder 5
+
+
     n 'Sayori, can you really perform at the festival?'
     s 'I can do it.'
     m 3a 'Is everyone ready?'
     mc 'Yeah.'
     'Around the room, I can see all the work put into the festival.'
     'Monika steps up to the podium.'
+
+
     hide natsuki
     hide sayori
     hide yuri
     show monika 2b at f11 zorder 2
+
+
     m 3b 'Hello Everyone! I am Monika, the president of The Literature Club. First I should start with our mission. We provide a space where everyone, even not as avid readers, can read and socialize.'
     m 4a 'We write and share poems everyday! Here at the festival, we will perform some of these poems!'
     m 5a 'I will start with my poem, Hole In The Wall.'
@@ -157,19 +168,41 @@ label festival:
     m 1q 'I realize now, that I wasn\'t looking in.'
     m 1i 'I was looking out.'
     m 1i 'And he, on the other side, was looking in.'
-    'The whole audience burst into aplause, including us.'
+    'The whole audience bursts into aplause, including us.'
+
+
     show monika 1a at t21 zorder 2
     show natsuki 4d at t22 zorder 3
+
+
     n 'You did really well, Monika.'
     m 'I guess.'
+
+
     show monika 1a at t31 zorder 2
     show natsuki 4d at t32 zorder 3
     show yuri 1a at t33 zorder 4
+
+
     y 'That was excellent performing.'
+
+
+    show monika 1a at t41 zorder 2
+    show natsuki 4d at t42 zorder 3
+    show yuri 1a at t43 zorder 4
+    show sayori 1a at t44 zorder 5
+
+
+    s 'Wish me luck guys.'
+    mc 'You bet.'
+
+
     hide natsuki
     hide monika
     hide yuri
     show sayori 1a at t11 zorder 2
+
+
     s 'Hi everyone, so um I am Sayori, the vice president of the Literature Club'
     s 'I am going to recite my poem, Dear Sunshine.'
     s '...'
@@ -186,10 +219,42 @@ label festival:
     s 3h 'If it wasnt for you, I could sleep forever.'
     s 1a 'But I\'m not mad.'
     s 3y 'I want breakfast.'
+    'Everyone in the room starts clapping.'
+
+    show sayori 1a at t41 zorder 2
+    show natsuki 4a at t42 zorder 3
+    show yuri 1a at t43 zorder 4
+    show monika 2a at t44 zorder 5
+    'When I look at Sayori, she looks genuinly happy for the first time since I had rejected her.'
+    mc 'Sayori, you did extremely well!'
+    s 5b '...Maybe...'
+    n 5l 'Sayori, stop trying to deny it! Yours was way better than mine will be!'
+    s 1m 'Yours is better! Its about [player]!'
+    n 5o 'How do you know!'
+    y 1d 'Natsuki, we all know it!'
+    n 52c 'You all don\'t know what you are talking about do you.'
+    mc 'Yeah we do.'
+    n 52b 'Uhhhhhhh...'
+    'Natsuki tries to run but I grab her wrist.'
+    n 5u 'Huh?'
+    mc 'You still need to perform.'
+    n 5h 'Fine.'
+    'Natsuki steps up to the podium.'
+    hide monika
+    hide yuri
+    hide sayori
+    show natsuki 1i at t11 zorder 2
+    n 2j 'Hello! I am Natsuki, a member at the Literature Club.'
+
+
+
+
 
 
     return
 label nofestival:
     hide natsuki
     hide sayori
+    return
+label afterfestival:
     return
