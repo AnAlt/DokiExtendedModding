@@ -48,7 +48,7 @@ label dokiextended:
     mc 'All that matters now is that you are alive.'
     mc 'How about you change into your school uniform.'
     s 'Okay...'
-    hide sayori 1bh at l11 zorder 1
+    hide sayori 1bh at l11 zorder 1 with dissolve
     'I pick up the rope and throw it into a nearby trashcan.'
     show sayori 1f at t11 zorder 2
     s 'I don\'t know if I can perform at the festival today...'
@@ -307,7 +307,7 @@ label festival:
     n 5f'Hey!'
 
 
-    'As I think about my speach, the girls\' conversation starts to fade away.'
+    'As I think about my speach, the Nat and Yuri\'s conversation starts to fade away.'
 
 
     mc 'Ok. I\'m ready.'
@@ -321,7 +321,22 @@ label festival:
     'I recite my poem.'
     scene bg club_day
     with dissolve_scene_full
-    'end'
+    'The audience applauds.'
+    show natsuki 1a at t41 zorder 2
+    show sayori 1a at t42 zorder 3
+    show yuri 1a at t43 zorder 4
+    show monika 2a at t44 zorder 5
+    s 'That was really good [player]!'
+    mc 'It was ok...'
+    n 'You could have improved more.'
+    mc 'Yeah.'
+    scene bg corridor
+    with wipeleft_scene
+    hide sayori
+    hide yuri
+    hide monika
+    show natsuki 5a at face zorder 2
+    'As everyone starts to leave, Natsuki and I are the only ones left.'
 
     return
 label nofestival:
