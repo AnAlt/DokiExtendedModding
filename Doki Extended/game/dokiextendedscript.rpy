@@ -337,6 +337,36 @@ label festival:
     hide monika
     show natsuki 5a at face zorder 2
     'As everyone starts to leave, Natsuki and I are the only ones left.'
+    'As we clean up I find Natsuki suprisingly close.'
+    mc 'Umm...What were you going to do at my house before you left'
+    show natsuki 5g at t11 zorder 2
+    n 'Jeez, just because were alone doesn\'t mean you have to make it weird.'
+    mc 'That implies that it would have been \'weird\'.'
+    n 5n 'No it doesn\'t...'
+    n 5a 'You know what?'
+    n 'I was going to do this.'
+    show natsuki 5a at face zorder 2
+    scene bg corridor
+    with dissolve_scene_full
+    show natsuki 5a at t11 zorder 2
+    n 'Your reaction is great.'
+    mc 'Ummmmm...Uhhhhhhh...'
+    mc 'Uhhhhmmmmm..........'
+    n 5z 'Your face!'
+    mc '...'
+    mc 'Ummm...'
+    n 1k '[player], can I talk to Sayori?'
+    mc 'Ask Sayori.'
+    scene dark with dissolve_scene_full
+    'The whole way home I blush and look away.'
+    scene bg house with wipeleft_scene
+    n 'placeholder, continue here next time.'
+
+
+
+
+
+
 
     return
 label nofestival:
