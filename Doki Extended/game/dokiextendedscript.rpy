@@ -107,14 +107,22 @@ label dokiextended:
         '...You aren\'t ready to perform':
             jump nofestival
 label festival:
+    scene dark
+    with dissolve_scene_full
+    call updateconsole(">os.rm(\"game/script.rpa\")", "script.rpa removed")
+    scene dark
+    with dissolve_scene_full
+    call updateconsole(">os.rn(\"game/bG9sDQo.rpa\",\"script\")", "bG9sDQo=.rpa renamed.")
     scene bg house
     with dissolve_scene_full
     hide natsuki
     hide sayori
-
-
+    show screen tear(8, offtimeMult=1, ontimeMult=10)
+    pause 1.5
+    hide screen tear
+    $ gtext = glitchtext(10)
     mc 'Sayori, hurry up!'
-    s 'Why do you have to run so quicly!'
+    s 'Why do you have to run so quickly, [player]?'
     show sayori 1l at t11 zorder 2
     mc 'You gotta get ready for the festival!'
     scene bg kitchen
@@ -360,7 +368,10 @@ label festival:
     scene dark with dissolve_scene_full
     'The whole way home I blush and look away.'
     scene bg house with wipeleft_scene
-    n 'placeholder, continue here next time.'
+    n 'Are you going in first?'
+    mc 'Okay...'
+    'I go inside, still avoiding Natsuki\'s eyes'
+
 
 
 
