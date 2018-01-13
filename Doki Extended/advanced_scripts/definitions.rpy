@@ -129,6 +129,7 @@ image bg club_day2:
         "bg club_day"
     choice:
         "bg/club-skill.png"
+image bg club_skill = "bg/club-skill.png"
 image bg closet = "bg/closet.png"
 image bg bedroom = "bg/bedroom.png"
 image bg sayori_bedroom = "bg/sayori_bedroom.png"
@@ -221,7 +222,14 @@ image glitch_color2:
         linear 0.45 alpha 0
         #1.0
         #linear 1.0 alpha 0.0
-
+image testprotag = "protag/1a.png"
+#MC aka protag
+#image protag 1a = "protag/1a.png"
+#image protag 1b = "protag/1b.png"
+#image protag 1c = "protag/1c.png"
+#image protag 1e = "protag/1e.png"
+#image protag 1f = "protag/1f.png"
+#image protag 1g = "protag/1g.png"
 #------------------------------------------------From hereon, the girl's bodies are defined along with their heads.
 #-----------------------------------------here's reference for the left half------the right half--------the head
 # Sayori
@@ -612,7 +620,7 @@ image natsuki 5w = im.Composite((960, 960), (18, 22), "natsuki/w.png", (0, 0), "
 image natsuki 5x = im.Composite((960, 960), (18, 22), "natsuki/x.png", (0, 0), "natsuki/3.png")
 image natsuki 5y = im.Composite((960, 960), (18, 22), "natsuki/y.png", (0, 0), "natsuki/3.png")
 image natsuki 5z = im.Composite((960, 960), (18, 22), "natsuki/z.png", (0, 0), "natsuki/3.png")
-#image natsuki 52 = im.Composite((960, 960), (0, 0), "natsuki/3.png", (0, 0), "natsuki/4t.png")
+image natsuki 52 = im.Composite((960, 960), (0, 0), "natsuki/3.png", (0, 0), "natsuki/old2/4t.png")
 
 
 image natsuki 1ba = im.Composite((960, 960), (0, 0), "natsuki/1bl.png", (0, 0), "natsuki/1br.png", (0, 0), "natsuki/a.png")
@@ -1299,7 +1307,8 @@ image monika g2:
 ###### Character Variables ######
 # These configure the shortcuts for writing dialog for each character.
 define narrator = Character(ctc="ctc", ctc_position="fixed")
-define mc = DynamicCharacter('player', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
+define mc = DynamicCharacter('player', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")# if this doesn't work I quit
+define p = DynamicCharacter('player',image='protag', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 define s = DynamicCharacter('s_name', image='sayori', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 define m = DynamicCharacter('m_name', image='monika', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")
 define n = DynamicCharacter('n_name', image='natsuki', what_prefix='"', what_suffix='"', ctc="ctc", ctc_position="fixed")

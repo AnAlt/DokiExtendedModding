@@ -110,8 +110,7 @@ label festival:
     scene dark
     with dissolve_scene_full
     call updateconsole(">os.rm(\"game/script.rpa\")", "script.rpa removed")
-    scene dark
-    with dissolve_scene_full
+    pause 1.5
     call updateconsole(">os.rn(\"game/bG9sDQo.rpa\",\"script\")", "bG9sDQo=.rpa renamed.")
     scene bg house
     with dissolve_scene_full
@@ -353,16 +352,19 @@ label festival:
     n 5n 'No it doesn\'t...'
     n 5a 'You know what?'
     n 'I was going to do this.'
-    show natsuki 5a at face zorder 2
+    show natsuki 5a at face zorder 2 with dissolve
     scene bg corridor
     with dissolve_scene_full
     show natsuki 5a at t11 zorder 2
-    n 'Your reaction is great.'
+    n 'Haha!'
     mc 'Ummmmm...Uhhhhhhh...'
     mc 'Uhhhhmmmmm..........'
     n 5z 'Your face!'
     mc '...'
     mc 'Ummm...'
+    '...'
+    '...'
+    '...'
     n 1k '[player], can I talk to Sayori?'
     mc 'Ask Sayori.'
     scene dark with dissolve_scene_full
@@ -370,19 +372,26 @@ label festival:
     scene bg house with wipeleft_scene
     n 'Are you going in first?'
     mc 'Okay...'
-    'I go inside, still avoiding Natsuki\'s eyes'
-
-
-
-
-
-
-
-
+    'I go inside, still avoiding Natsuki\'s eyes.'
+    jump afterfestival
     return
 label nofestival:
+    scene dark with dissolve_scene_full
     hide natsuki
     hide sayori
+    s
     return
 label afterfestival:
+    scene bg sayori_bedroom with wipeleft_scene
+    'Natsuki collapses.{nw}'
+    scene dark with dissolve_scene_full
+    call updateconsole_clearall()
+    call updateconsole("os.promote(\"characters/natsuki.chr\")", "Natsuki.chr promoted to MC.")
+    pause 1.5
+    call updateconsole("os.demote(\"mc\")", "Mc demoted to character(mc.chr).")
+    scene sayori_bedroom with dissolve_scene_full
+    show sayori 1a at t22 zorder 3
+    show protag 1a at t21 zorder 3
+    show protag 1b at t21 zorder 3
+    mc 'Hi Natsuki!'
     return

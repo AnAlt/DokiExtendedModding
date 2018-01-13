@@ -435,7 +435,8 @@ Get out of my head before I listen to everything she said to me.
 Get out of my head before I show you how much I love you.
 Get out of my head before I finish writing this poem.\n\n\n\n\n\n\n
 But a poem is never actually finished.
-It just stops moving."""
+It just stops moving.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n
+I don't want to die."""
     )
 
     poem_m1 = Poem(
