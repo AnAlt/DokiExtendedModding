@@ -365,25 +365,27 @@ label festival:
     '...'
     '...'
     '...'
-    n 1k '[player], can I talk to Sayori?'
-    mc 'Ask Sayori.'
-    scene dark with dissolve_scene_full
-    'The whole way home I blush and look away.'
+    n 5s'...'
+    n 1f '[player], can I talk to Sayori?'
+    mc 'Okay...'
     scene bg house with wipeleft_scene
     n 'Are you going in first?'
     mc 'Okay...'
-    'I go inside, still avoiding Natsuki\'s eyes.'
+    'I go inside, avoiding Natsuki\'s eyes.'
     jump afterfestival
     return
 label nofestival:
     scene dark with dissolve_scene_full
     hide natsuki
     hide sayori
-    s
     return
 label afterfestival:
     scene bg sayori_bedroom with wipeleft_scene
-    'Natsuki collapses.{nw}'
+    $ gtext = glitchtext(6)
+    $ gtext2 = glitchtext(9)
+    $ style.say_dialogue = style.edited
+    '[gtext] [gtext2]{nw}'
+    $ style.say_dialogue = style.normal
     scene dark with dissolve_scene_full
     call updateconsole_clearall()
     call updateconsole("os.promote(\"characters/natsuki.chr\")", "Natsuki.chr promoted to MC.")
@@ -392,6 +394,15 @@ label afterfestival:
     scene sayori_bedroom with dissolve_scene_full
     show sayori 1a at t22 zorder 3
     show protag 1a at t21 zorder 3
-    show protag 1b at t21 zorder 3
-    mc 'Hi Natsuki!'
+    show protag 1c at t21 zorder 3
+    'Are you okay?'
+    scene dark with dissolve_scene_full
+    hide sayori
+    hide protag
+    n 'No...'
+    '..!' #insert kirito urgish noise
+    n 'My dad...'
+    n 'He abuses me...'
+    #insert menu choice on decision
+    
     return
