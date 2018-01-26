@@ -6,8 +6,8 @@ screen main_menu():
     style_prefix "main_menu"
     
     add "menu_bg"
-    add "menu_art_y"
-    add "menu_art_n"
+#    add "menu_art_y"
+#    add "menu_art_n"
     frame:
         pass
 
@@ -19,9 +19,9 @@ screen main_menu():
     add "menu_particles"
     add "menu_particles"
     add "menu_logo"
-    add "menu_art_s"
+#    add "menu_art_s"
     add "menu_particles"
-    add "menu_art_m"
+#    add "menu_art_m"
     add "menu_fade"
 
     if gui.show_name:
