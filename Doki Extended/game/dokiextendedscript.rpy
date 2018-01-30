@@ -384,7 +384,8 @@ label afterfestival:
     $ gtext = glitchtext(6)
     $ gtext2 = glitchtext(9)
     $ style.say_dialogue = style.edited
-    '[gtext] [gtext2]{nw}'
+    show protag 1e at face
+    '{cps=5}[gtext] [gtext2]{/cps}{nw}'
     $ style.say_dialogue = style.normal
     scene dark with dissolve_scene_full
     call updateconsole_clearall()
