@@ -405,5 +405,6 @@ label afterfestival:
     n 'My dad...'
     n 'He abuses me...'
     #insert menu choice on decision
-    
+    scene bg residential_day
+    with dissolve_scene_full
     return
