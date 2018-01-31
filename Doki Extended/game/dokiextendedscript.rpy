@@ -342,9 +342,8 @@ label festival:
     hide sayori
     hide yuri
     hide monika
-    show natsuki 5a at face zorder 2
+    show natsuki 5a at t11 zorder 2
     'As everyone starts to leave, Natsuki and I are the only ones left.'
-    'As we clean up I find Natsuki suprisingly close.'
     mc 'Umm...What were you going to do at my house before you left'
     show natsuki 5g at t11 zorder 2
     n 'Jeez, just because were alone doesn\'t mean you have to make it weird.'
@@ -400,11 +399,15 @@ label afterfestival:
     scene dark with dissolve_scene_full
     hide sayori
     hide protag
+    stop music fadeout 2.0
     n 'No...'
-    '..!' #insert kirito urgish noise
+    mc '...!' #insert kirito urgish noise
     n 'My dad...'
     n 'He abuses me...'
-    #insert menu choice on decision
+    pause 3.0
+    
     scene bg residential_day
     with dissolve_scene_full
+    show protag 1a at t21 zorder 2
+    show sayori 1a at t22 zorder 3
     return
