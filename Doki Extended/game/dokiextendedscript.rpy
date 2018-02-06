@@ -1,3 +1,10 @@
+#Hi random rpa extracting boi
+#I am a dev
+#I am solarsteeeal / steeeal / AnAlt
+#I am @AnAlt#4177 on discord
+#I like anime
+#Like Fullmetal Alchemist and Re:zero
+
 label dokiextended:
     stop music fadeout 2.0
     play music t2
