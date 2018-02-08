@@ -391,9 +391,14 @@ label afterfestival:
     $ gtext2 = glitchtext(9)
     $ style.say_dialogue = style.edited
 <<<<<<< HEAD
+<<<<<<< HEAD
     show protag 1e at t11 zorder 2
     '[gtext] [gtext2]'
 
+=======
+    show protag 1e at face
+    '{cps=5}[gtext] [gtext2]{/cps}{nw}'
+>>>>>>> 43def90d4b8e87cd80e849eae6069860041dba27
 =======
     show protag 1e at face
     '{cps=5}[gtext] [gtext2]{/cps}{nw}'
@@ -418,14 +423,20 @@ label afterfestival:
     n 'My dad...'
     n 'He abuses me...'
 <<<<<<< HEAD
+<<<<<<< HEAD
     #insert menu choice on decision
     scene bg house with dissolve_scene_full
 =======
+=======
+>>>>>>> 43def90d4b8e87cd80e849eae6069860041dba27
     pause 3.0
     
     scene bg residential_day
     with dissolve_scene_full
     show protag 1a at t21 zorder 2
     show sayori 1a at t22 zorder 3
+<<<<<<< HEAD
+>>>>>>> 43def90d4b8e87cd80e849eae6069860041dba27
+=======
 >>>>>>> 43def90d4b8e87cd80e849eae6069860041dba27
     return
