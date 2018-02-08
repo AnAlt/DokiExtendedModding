@@ -1,3 +1,10 @@
+#Hi random rpa extracting boi
+#I am a dev
+#I am solarsteeeal / steeeal / AnAlt
+#I am @AnAlt#4177 on discord
+#I like anime
+#Like Fullmetal Alchemist and Re:zero
+
 label dokiextended:
     stop music fadeout 2.0
     play music t2
@@ -342,9 +349,8 @@ label festival:
     hide sayori
     hide yuri
     hide monika
-    show natsuki 5a at face zorder 2
+    show natsuki 5a at t11 zorder 2
     'As everyone starts to leave, Natsuki and I are the only ones left.'
-    'As we clean up I find Natsuki suprisingly close.'
     mc 'Umm...What were you going to do at my house before you left'
     show natsuki 5g at t11 zorder 2
     n 'Jeez, just because were alone doesn\'t mean you have to make it weird.'
@@ -384,7 +390,14 @@ label afterfestival:
     $ gtext = glitchtext(6)
     $ gtext2 = glitchtext(9)
     $ style.say_dialogue = style.edited
-    '[gtext] [gtext2]{nw}'
+<<<<<<< HEAD
+    show protag 1e at t11 zorder 2
+    '[gtext] [gtext2]'
+
+=======
+    show protag 1e at face
+    '{cps=5}[gtext] [gtext2]{/cps}{nw}'
+>>>>>>> 43def90d4b8e87cd80e849eae6069860041dba27
     $ style.say_dialogue = style.normal
     scene dark with dissolve_scene_full
     call updateconsole_clearall()
@@ -399,10 +412,20 @@ label afterfestival:
     scene dark with dissolve_scene_full
     hide sayori
     hide protag
+    stop music fadeout 2.0
     n 'No...'
-    '..!' #insert kirito urgish noise
+    mc '...!' #insert kirito urgish noise
     n 'My dad...'
     n 'He abuses me...'
+<<<<<<< HEAD
     #insert menu choice on decision
+    scene bg house with dissolve_scene_full
+=======
+    pause 3.0
     
+    scene bg residential_day
+    with dissolve_scene_full
+    show protag 1a at t21 zorder 2
+    show sayori 1a at t22 zorder 3
+>>>>>>> 43def90d4b8e87cd80e849eae6069860041dba27
     return
