@@ -390,19 +390,15 @@ label afterfestival:
     $ gtext = glitchtext(6)
     $ gtext2 = glitchtext(9)
     $ style.say_dialogue = style.edited
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     show protag 1e at t11 zorder 2
     '[gtext] [gtext2]'
 
-=======
     show protag 1e at face
     '{cps=5}[gtext] [gtext2]{/cps}{nw}'
->>>>>>> 43def90d4b8e87cd80e849eae6069860041dba27
-=======
     show protag 1e at face
     '{cps=5}[gtext] [gtext2]{/cps}{nw}'
->>>>>>> 43def90d4b8e87cd80e849eae6069860041dba27
+
     $ style.say_dialogue = style.normal
     scene dark with dissolve_scene_full
     call updateconsole_clearall()
